@@ -1,7 +1,7 @@
 :root {
     /* ### Primary */
 
---Gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
+--Gradient: linear-gradient(to right, hsl(6, 100%, 80%) 30%, hsl(335, 100%, 65%) 70%);
 
 /* ### Neutral */
 
@@ -26,6 +26,10 @@
     font-family: "Raleway", sans-serif
 }
 
+h1, h2, h3, h4 {
+    margin: 0;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -36,4 +40,109 @@ body {
     background: var(--Blue-950);
     background-image: url(images/bg-mobile.png);
     background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
+
+
+.main-box {
+    display: flex;
+    flex-direction: column;
+    background: var(--Blue-850);
+    padding: 2rem;
+    margin: 2rem;
+    width: calc(30rem - 50px);
+    border-radius: 0.6rem 5rem 0.6rem 0.6rem;
+}
+
+.main-box img {
+    width: 45%;
+}
+
+.main-box .icon-group {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.main-box .icon-group .icons{
+    display: flex;
+    background: var(--Blue-950);
+    height: 3rem;
+    width: 3rem;
+}
+
+
+.details-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background: var(--Blue-850);
+    border-radius: 0.5rem;
+    position: relative;
+}
+
+.details-box h4 {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+.details-box h4 span {
+    font-weight: 600;
+}
+
+.storage-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    height: 1.1rem;
+    width: 100%;
+    background: var(--Blue-950);
+    border-radius: 0.5rem;
+}
+
+.used-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    height: 0.8rem;
+    width: 81.5%;
+    margin-left: 0.1rem;
+    background: var(--Gradient);
+    border-radius: 0.5rem;
+}
+
+.read-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 0.6rem;
+    width: 0.6rem;
+    margin-right: 0.1rem;
+    background: var(--White);
+    border-radius: 0.5rem;
+}
+
+.stats {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 0.5rem 0;
+    justify-content: space-between;
+}
+
+
+.float-stat {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background: var(--White);
+    padding: 1rem;
+    color: var(--Blue-950);
+    border-radius: 0.5rem;
+    bottom: -2rem;
+}
+
