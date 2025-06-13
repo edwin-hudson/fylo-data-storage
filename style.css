@@ -10,6 +10,8 @@
 --Blue-850: hsl(228, 56%, 26%);
 --Blue-950: hsl(229, 57%, 11%);
 
+--White: hsl(0, 0%, 100%);
+
 /* ## Typography */
 
 /* ### Body Copy */
@@ -21,4 +23,17 @@
     padding: 0;
     margin-top: 0;
     box-sizing: border-box;
+    font-family: "Raleway", sans-serif
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: var(--White);
+    background: var(--Blue-950);
+    background-image: url(images/bg-mobile.png);
+    background-repeat: no-repeat;
 }
