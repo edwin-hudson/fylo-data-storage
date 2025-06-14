@@ -30,6 +30,12 @@ h1, h2, h3, h4 {
     margin: 0;
 }
 
+.main-box img,
+.used-indicator,
+.read-circle {
+    cursor: pointer;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -44,34 +50,53 @@ body {
     background-size: cover;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% - 20px);
+}
 
 .main-box {
     display: flex;
     flex-direction: column;
     background: var(--Blue-850);
     padding: 2rem;
-    margin: 2rem;
-    width: calc(30rem - 50px);
+    margin-bottom: 1rem;
+    width: 100%;
+    max-width: 31.25rem;
     border-radius: 0.6rem 5rem 0.6rem 0.6rem;
 }
 
-.main-box img {
+.logo {
     width: 45%;
+    max-width: 8.75rem;
+    margin: 0.5rem 0 2rem;
 }
 
 .main-box .icon-group {
     display: flex;
     flex-direction: row;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 .main-box .icon-group .icons{
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background: var(--Blue-950);
     height: 3rem;
     width: 3rem;
+    border-radius: 0.5rem;
 }
 
+.main-box .icon-group .icons img {
+    margin: 0;
+}
+
+/* Second box CSS */
 
 .details-box {
     display: flex;
@@ -81,12 +106,14 @@ body {
     background: var(--Blue-850);
     border-radius: 0.5rem;
     position: relative;
+    width: 100%;
+    max-width: 31.25rem;
 }
 
 .details-box h4 {
-    font-size: 1rem;
-    font-weight: 400;
-    margin-bottom: 2rem;
+    font-size: 0.8rem;
+    font-weight: 200;
+    margin-bottom: 1rem;
 }
 .details-box h4 span {
     font-weight: 600;
@@ -108,7 +135,7 @@ body {
     justify-content: end;
     height: 0.8rem;
     width: 81.5%;
-    margin-left: 0.1rem;
+    margin-left: 0.2rem;
     background: var(--Gradient);
     border-radius: 0.5rem;
 }
@@ -119,7 +146,7 @@ body {
     justify-content: center;
     height: 0.6rem;
     width: 0.6rem;
-    margin-right: 0.1rem;
+    margin-right: 0.2rem;
     background: var(--White);
     border-radius: 0.5rem;
 }
@@ -146,3 +173,62 @@ body {
     bottom: -2rem;
 }
 
+.float-stat h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0 1rem 0 0.5rem;
+    color: var(--Grayish-Blue);
+}
+
+.stats h3 {
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+
+@media screen and (min-width: 64rem) {
+    body {
+        background-image: url(images/bg-desktop.png);
+        background-size: contain;
+        background-position: bottom;
+
+    }
+    main {
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    .main-box {
+        margin-bottom: 6.5rem;
+        width: 20%;
+    }
+
+    .details-box {
+        margin-bottom: 4rem;
+    }
+
+    .details-box h4 {
+        width: 100%;
+    }
+
+    .float-stat {
+        top: -2rem;
+        bottom: 8rem;
+        right: 2.2rem;
+    }
+
+    .float-stat::before {
+        position: absolute;
+        content: '';
+        height: 1.5rem;
+        width: 1.5rem;
+        background: var(--White);
+        right: 0;
+        bottom: -1rem;
+        clip-path: polygon(100% 0, 0 0, 100% 100%);
+    }
+
+    .float-stat h3 {
+        font-size: 0.8rem;
+        margin-left: 0.5rem;
+    }
+}
